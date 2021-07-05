@@ -32,7 +32,7 @@ const nav = document.getElementById('navbar__list');
 
 // build the nav
 // Creates a set amount of Navbar Buttons in an unordered list, adds an anchor tag and class for both
-let navItems = ["Product", "About", "Expertise"];
+let navItems = ["Product", "About", "Expertise", "Contact"];
 function createNavs(){
   for (let i = 0; i < navItems.length; i++) {
     let itemName = navItems[i];
@@ -56,41 +56,43 @@ createNavs()
 const one = document.getElementById('section1');
 const two = document.getElementById('section2');
 const three = document.getElementById('section3');
+const four = document.getElementById('section4');
 
 const navOne = document.querySelector('.nav-link1');
 const navTwo = document.querySelector('.nav-link2');
 const navThree = document.querySelector('.nav-link3');
+const navFour = document.querySelector('.nav-link4');
 
 // Nav Link changes background colour when section is scrolled-to
 // Add class 'your-active-class' to section when near top of viewport
 window.addEventListener('scroll', function(){
 
   if (one.getBoundingClientRect().top < window.innerHeight - 500){
-    two.classList.remove("your-active-class");
-    three.classList.remove("your-active-class");
-    one.classList.add("your-active-class");
-
-    navOne.setAttribute("style", "background-color: rgba(0,0,0,0.3);")
-    navTwo.setAttribute("style", "background-color: none;")
-    navThree.setAttribute("style", "background-color: none;")
+    navTwo.classList.remove("your-active-class");
+    navThree.classList.remove("your-active-class");
+    navFour.classList.remove("your-active-class");
+    navOne.classList.add("your-active-class");
+    
   }
   if (two.getBoundingClientRect().top < window.innerHeight - 500){
-    one.classList.remove("your-active-class");
-    three.classList.remove("your-active-class");
-    two.classList.add("your-active-class");
+    navOne.classList.remove("your-active-class");
+    navThree.classList.remove("your-active-class");
+    navFour.classList.remove("your-active-class");
+    navTwo.classList.add("your-active-class");
 
-    navTwo.setAttribute("style", "background-color: rgba(0,0,0,0.3);")
-    navOne.setAttribute("style", "background-color: none;")
-    navThree.setAttribute("style", "background-color: none;")
   }
   if (three.getBoundingClientRect().top < window.innerHeight - 500){
-    one.classList.remove("your-active-class");
-    two.classList.remove("your-active-class");
-    three.classList.add("your-active-class");
-
-    navThree.setAttribute("style", "background-color: rgba(0,0,0,0.3);")
-    navTwo.setAttribute("style", "background-color: none;")
-    navOne.setAttribute("style", "background-color: none;")
+    navOne.classList.remove("your-active-class");
+    navTwo.classList.remove("your-active-class");
+    navFour.classList.remove("your-active-class");
+    navThree.classList.add("your-active-class");
+    
+  }
+  if (four.getBoundingClientRect().top < window.innerHeight - 500){
+    navOne.classList.remove("your-active-class");
+    navTwo.classList.remove("your-active-class");
+    navThree.classList.remove("your-active-class");
+    navFour.classList.add("your-active-class");
     
   }
 
