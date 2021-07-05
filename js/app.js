@@ -68,32 +68,50 @@ const navFour = document.querySelector('.nav-link4');
 window.addEventListener('scroll', function(){
 
   if (one.getBoundingClientRect().top < window.innerHeight - 500){
-    navTwo.classList.remove("your-active-class");
-    navThree.classList.remove("your-active-class");
-    navFour.classList.remove("your-active-class");
-    navOne.classList.add("your-active-class");
+    navTwo.classList.remove("active");
+    navThree.classList.remove("active");
+    navFour.classList.remove("active");
+    navOne.classList.add("active");
+
+    two.classList.remove("your-active-class");
+    three.classList.remove("your-active-class");
+    four.classList.remove("your-active-class");
+    one.classList.add("your-active-class");
     
   }
   if (two.getBoundingClientRect().top < window.innerHeight - 500){
-    navOne.classList.remove("your-active-class");
-    navThree.classList.remove("your-active-class");
-    navFour.classList.remove("your-active-class");
-    navTwo.classList.add("your-active-class");
+    navOne.classList.remove("active");
+    navThree.classList.remove("active");
+    navFour.classList.remove("active");
+    navTwo.classList.add("active");
 
+    one.classList.remove("your-active-class");
+    three.classList.remove("your-active-class");
+    four.classList.remove("your-active-class");
+    two.classList.add("your-active-class");
   }
   if (three.getBoundingClientRect().top < window.innerHeight - 500){
-    navOne.classList.remove("your-active-class");
-    navTwo.classList.remove("your-active-class");
-    navFour.classList.remove("your-active-class");
-    navThree.classList.add("your-active-class");
+    navOne.classList.remove("active");
+    navTwo.classList.remove("active");
+    navFour.classList.remove("active");
+    navThree.classList.add("active");
+
+    two.classList.remove("your-active-class");
+    one.classList.remove("your-active-class");
+    four.classList.remove("your-active-class");
+    three.classList.add("your-active-class");
     
   }
   if (four.getBoundingClientRect().top < window.innerHeight - 500){
-    navOne.classList.remove("your-active-class");
-    navTwo.classList.remove("your-active-class");
-    navThree.classList.remove("your-active-class");
-    navFour.classList.add("your-active-class");
+    navOne.classList.remove("active");
+    navTwo.classList.remove("active");
+    navThree.classList.remove("active");
+    navFour.classList.add("active");
     
+    two.classList.remove("your-active-class");
+    one.classList.remove("your-active-class");
+    three.classList.remove("your-active-class");
+    four.classList.add("your-active-class");
   }
 
 });
