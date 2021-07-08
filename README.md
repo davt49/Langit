@@ -16,4 +16,4 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 Readme to be completed when ready.
 
-Using DOM manipulations I generated a Nav Bar from JavaScript, as well as making it respond to scroll events on the browser. The links when clicked will scroll towards the section using html scroll behavior.
+Using DOM manipulations I generated a Nav Bar from JavaScript, as well as making it change state as it responds to scroll events on the browser. 
