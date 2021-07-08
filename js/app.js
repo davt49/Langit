@@ -32,7 +32,11 @@ const nav = document.getElementById('navbar__list');
 
 // build the nav
 // Creates a set amount of Navbar Buttons in an unordered list, adds an anchor tag and class for both
+//click to scroll function directly put into anchor creation to scroll to the section selected
 let navItems = ["Product", "About", "Expertise", "Contact"];
+
+const sections = document.querySelectorAll("section")
+
 function createNavs(){
   for (let i = 0; i < navItems.length; i++) {
     let itemName = navItems[i];
@@ -42,6 +46,10 @@ function createNavs(){
     anchor.innerHTML = itemName;
     anchor.href = "#section" + (i + 1);
     anchor.classList.add("anchor" + (i + 1));
+    anchor.addEventListener("click", (event) => {
+      event.preventDefault();
+      sections[i].scrollIntoView({ behavior: "smooth" });
+    });
     li.appendChild(anchor);
     nav.appendChild(li);
 
@@ -62,6 +70,7 @@ const navOne = document.querySelector('.nav-link1');
 const navTwo = document.querySelector('.nav-link2');
 const navThree = document.querySelector('.nav-link3');
 const navFour = document.querySelector('.nav-link4');
+  
 
 // Nav Link changes background colour when section is scrolled-to
 // Add class 'your-active-class' to section when near top of viewport
